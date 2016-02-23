@@ -24,8 +24,8 @@
         android:id="@+id/spacer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:visibility="gone" />
+        android:layout_weight="0"
+        android:visibility="invisible" />
 
     <Button
         android:id="@android:id/button2"

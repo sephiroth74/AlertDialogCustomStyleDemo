@@ -12,7 +12,19 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button1).setOnClickListener(v ->
             new android.support.v7.app.AlertDialog
                 .Builder(MainActivity.this, R.style.AlertDialogLight)
-                .setTitle("Title")
+                .setTitle("Dialog from custom style")
+                .setMessage(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium auctor magna ut pulvinar. Curabitur "
+                        + "consectetur volutpat, sapien nibh rutrum nulla, ut euismod tellus tortor vel mauris. Sed non lectus "
+                        + "pretium velit finibus feugiat. Curabitur efficitur lorem congue nisl sodales mollis.")
+                .setPositiveButton(android.R.string.ok, null)
+                .setNegativeButton(android.R.string.cancel, null)
+                .show());
+
+        findViewById(R.id.button2).setOnClickListener(v ->
+            new android.support.v7.app.AlertDialog
+                .Builder(MainActivity.this)
+                .setTitle("Default theme Dialog")
                 .setMessage(
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium auctor magna ut pulvinar. Curabitur "
                         + "consectetur volutpat, sapien nibh rutrum nulla, ut euismod tellus tortor vel mauris. Sed non lectus "

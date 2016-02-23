@@ -4,18 +4,36 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="alertDialogTheme">@style/AlertDialogDark</item>
     </style>
 
     <style name="AlertDialogLight" parent="Theme.AppCompat.Light.Dialog.Alert">
-        <item name="alertDialogTheme">@style/Theme.AppCompat.Light.Dialog.Alert</item>
-        <item name="alertDialogStyle">@style/My.AlertDialogStyle</item>
         <item name="buttonBarPositiveButtonStyle">@style/My.PositiveButton</item>
         <item name="buttonBarNegativeButtonStyle">@style/My.NegativeButton</item>
         <item name="buttonBarStyle">@style/My.ButtonBar</item>
         <item name="android:windowAnimationStyle">@style/My.Animation.AlertDialog</item>
+        <item name="alertDialogStyle">@style/My.AlertDialogStyle</item>
+    </style>
+
+    <style name="AlertDialogDark" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/My.PositiveButton.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/My.NegativeButton.Dark</item>
+        <item name="buttonBarStyle">@style/My.ButtonBar.Dark</item>
+        <item name="android:windowAnimationStyle">@style/My.Animation.AlertDialog</item>
+        <item name="alertDialogStyle">@style/My.AlertDialogStyle</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@drawable/my_dialog_material_background_dark</item>
+        <item name="android:windowTitleStyle">@style/My.WindowTitleStyle.Dark</item>
+        <item name="android:windowElevation" tools:ignore="NewApi">6dp</item>
     </style>
 
     <style name="My" />
+
+    <style name="My.WindowTitleStyle.Dark" parent="RtlOverlay.DialogWindowTitle.AppCompat">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 
     <style name="My.AlertDialogStyle" parent="AlertDialog.AppCompat">
         <item name="android:layout">@layout/my_alert_dialog_material</item>
@@ -27,14 +45,28 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
+    <style name="My.PositiveButton.Dark">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:backgroundTint" tools:ignore="NewApi">@color/colorPrimary</item>
+    </style>
+
     <style name="My.NegativeButton">
         <item name="android:backgroundTint" tools:ignore="NewApi">@color/colorPrimary</item>
         <item name="android:layout_marginRight">4dp</item>
         <item name="android:textAllCaps">false</item>
     </style>
 
+    <style name="My.NegativeButton.Dark">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:backgroundTint" tools:ignore="NewApi">@color/colorPrimaryDark</item>
+    </style>
+
     <style name="My.ButtonBar">
         <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <style name="My.ButtonBar.Dark">
+        <item name="android:background">#33ffffff</item>
     </style>
 
     <style name="My.Animation.AlertDialog" parent="android:Animation">
